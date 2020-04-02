@@ -1,0 +1,41 @@
+{
+	"fileName": "id_1571126819368_493_addXML",
+	"fileType": "change",
+	"changeType": "addXML",
+	"moduleName": "",
+	"reference": "customer.int8_purchasecontracts_maatwinsten",
+	"packageName": "$TMP",
+	"content": {
+		"fragmentPath": "fragments/Maatwinsten.fragment.xml",
+		"targetAggregation": "sections",
+		"index": 2
+	},
+	"selector": {
+		"id": "ui.s2p.mm.pur.ctr.maintain.sts1::sap.suite.ui.generic.template.ObjectPage.view.Details::C_ContractMaintainItem--objectPage",
+		"idIsLocal": false
+	},
+	"layer": "CUSTOMER_BASE",
+	"texts": {},
+	"namespace": "apps/ui.s2p.mm.pur.ctr.maintain.sts1/appVariants/customer.int8_purchasecontracts_maatwinsten/changes/",
+	"projectId": "customer.int8_purchasecontracts_maatwinsten",
+	"creation": "2019-10-15T08:07:40.851Z",
+	"originalLanguage": "EN",
+	"conditions": {},
+	"context": "",
+	"support": {
+		"generator": "Change.createInitialFileContent",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.70.0",
+		"sourceChangeFileName": "",
+		"compositeCommand": ""
+	},
+	"oDataInformation": {},
+	"dependentSelector": {},
+	"validAppVersions": {
+		"creation": "6.0.14",
+		"from": "6.0.14"
+	},
+	"jsOnly": false,
+	"variantReference": ""
+}

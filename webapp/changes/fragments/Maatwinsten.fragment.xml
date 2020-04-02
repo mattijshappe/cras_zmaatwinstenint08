@@ -1,0 +1,50 @@
+<!-- Use stable and unique id's!-->
+<core:FragmentDefinition xmlns="sap.uxap" xmlns:m="sap.m" xmlns:core="sap.ui.core" xmlns:smartField="sap.ui.comp.smartfield"
+	xmlns:form="sap.ui.comp.smartform" xmlns:layout="sap.ui.layout">
+	<ObjectPageSection title="{i18n|sap.suite.ui.generic.template.ObjectPage|to_ContractMaintainItem>SIZE_GAINS}" id="idMaatwinsten"
+		titleUppercase="false">
+		<subSections>
+			<ObjectPageSubSection id="Id1234">
+				<form:SmartForm id="SF1" editable="{ui>/editable}">
+					<form:layout id="SFL1">
+						<form:ColumnLayout columnsM="2" columnsL="3" columnsXL="4" id="SFCL1"/>
+					</form:layout>
+					<form:Group id="G2" label="{i18n|sap.suite.ui.generic.template.ObjectPage|to_ContractMaintainItem>PURCHASE_MM}">
+						<form:GroupElement id="GE-5">
+							<smartField:SmartField id="idPurThi" value="{ZZCHAR_PURCH_THICKNESS}" uomEditable="false" uomEnabled="false"/>
+						</form:GroupElement>
+						<form:GroupElement id="GE-6">
+							<smartField:SmartField id="idPurWid" value="{ZZCHAR_PURCH_WIDTH}" uomEditable="false" uomEnabled="false"/>
+						</form:GroupElement>
+						<form:GroupElement id="GE-7">
+							<smartField:SmartField id="idPurLen" value="{ZZCHAR_PURCH_LENGTH}" uomEditable="false" uomEnabled="false"/>
+						</form:GroupElement>
+						<form:GroupElement id="GE-8">
+							<smartField:SmartField id="idPurCir" value="{ZZCHAR_PURCH_CIRCUMFERENCE}" uomEditable="false" uomEnabled="false"/>
+						</form:GroupElement>
+						<form:GroupElement id="GE-9">
+							<smartField:SmartField id="idSawmill2" value="{ZZCHAR_SAWMILL}" uomEditable="false" uomEnabled="false"/>
+						</form:GroupElement>
+						<form:GroupElement id="GE-10">
+							<smartField:SmartField id="idCounOrig" value="{ZZCHAR_COUNTRY_OF_ORIGIN}" uomEditable="false" uomEnabled="false"/>
+						</form:GroupElement>
+					</form:Group>
+					<form:Group id="G3" label="{i18n|sap.suite.ui.generic.template.ObjectPage|to_ContractMaintainItem>SALES_MM}">
+						<form:GroupElement id="GE-11">
+							<smartField:SmartField id="idSalThi" value="{ZZCHAR_SALES_THICKNESS}" uomEditable="false" uomEnabled="false"/>
+						</form:GroupElement>
+						<form:GroupElement id="GE-12">
+							<smartField:SmartField id="idSalWid" value="{ZZCHAR_SALES_WIDTH}" uomEditable="false" uomEnabled="false"/>
+						</form:GroupElement>
+						<form:GroupElement id="GE-13">
+							<smartField:SmartField id="idSalLen" value="{ZZCHAR_SALES_LENGTH}" uomEditable="false" uomEnabled="false"/>
+						</form:GroupElement>
+						<form:GroupElement id="GE-14">
+							<smartField:SmartField id="idSalCir" value="{ZZCHAR_SALES_CIRCUMFERENCE}" uomEditable="false" uomEnabled="false"/>
+						</form:GroupElement>
+					</form:Group>
+				</form:SmartForm>
+			</ObjectPageSubSection>
+		</subSections>
+	</ObjectPageSection>
+</core:FragmentDefinition>
