@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+
+<!-- IMPORTANT
+    This HTML file is meant for testing the application/component standalone, outside the Unified Shell.
+    Some integration functionality, personalization etc. will not be available when running standalone.
+ -->
+
+<head>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+
+    <title>uif_smart_changes</title>
+
+	<style>
+		html, body {
+			height : 100%;
+		}
+		.sapUiComponentContainer {
+			height : 100%;
+		}
+		.sapUiComponentContainer>div {
+			height : 100%;
+		}
+	</style>
+	
+	
+		<script src="../../test-resources/sap/ushell/bootstrap/sandbox.js" id="sap-ushell-bootstrap"></script>
+
+    <script id="sap-ui-bootstrap"
+            src="/webapp/resources/sap-ui-core.js"
+            data-sap-ui-libs="sap.m, sap.ushell, sap.me, sap.ui.table, sap.ui.layout, sap.ui.rta, sap.ui.dt, sap.viz, sap.ui.fl, sap.ui.comp, sap.suite.ui.generic.template"
+            data-sap-ui-theme="sap_belize"
+            data-sap-ui-xx-bindingSyntax="complex"
+            data-sap-ui-compatVersion="1.16"
+			data-sap-ui-xx-rootComponentNode="content"
+			data-sap-ui-xx-designMode="true"
+			data-sap-ui-xx-suppressDeactivationOfControllerCode="true">
+    </script>
+	<script type="text/javascript">
+		window["adaptationProjectType"] = "true";
+		window["isInternal"] = "false";
+		sap.ui.getCore().attachInit(function() {
+			var oComponentConfig, sMergedManifest = "", sComponentName = "ui.s2p.mm.pur.ctr.maintain.sts1", sVariantID = "customer.int8_purchasecontracts_maatwinsten", sLayer = "CUSTOMER_BASE", oComponent;
+			if(sMergedManifest.length > 0){
+				//Adding Manifest into window so that we can access this manifest to get templateID which is use to hide AddFragments for OVP.
+				var oManifest = appVariantPreview.getParsedManifest(sMergedManifest);
+				window['manifest'] = oManifest[sVariantID]['manifest'];
+				//if MergedDescriptor is available from app previre service
+				console.log("App variant running on merged manifest from backend");
+				appVariantPreview.mergedDescriptorAppPreview(oManifest, sVariantID, sLayer).then(function(oShell){
+					oShell.placeAt("content");
+				});
+			} else {
+				//fallback mechanism
+				console.log("Merged descriptor could not be fetched from backend, falling back to non-merged execution");
+				appVariantPreview.fallbackAppVariantPreview(sComponentName, sVariantID, sLayer, window["isInternal"]).then(function(oShell){
+					//Adding Manifest into window so that we can access this manifest to get templateID which is use to hide AddFragments for OVP.
+					window['manifest'] = oShell.getApp().getComponentInstance().getManifest();
+					oShell.placeAt("content");
+				});
+			}
+		});
+	</script>
+
+    <script src="https://webidecp-s0006400414trial.dispatcher.hanatrial.ondemand.com/smarttemplatefeature_ufb67cb4d/client/v1.20.1_1574241719609/src/ovp-plugin/ovpPlugin/util/GenericUtils.js" type="text/javascript"></script>
+<script src="https://webidecp-s0006400414trial.dispatcher.hanatrial.ondemand.com/resources/~9c20cb149e00b7809f4a4ce212d92271fce0da1c~/sap/watt/lib/lodash/lodash.js" type="text/javascript"></script>
+<script src="https://webidecp-s0006400414trial.dispatcher.hanatrial.ondemand.com/uiadaptationstable_sapwebide/client/v1.0.0_1559048343450/uiadaptation/util/UIAdaptationTransceiver.js" type="text/javascript"></script>
+<script src="https://webidecp-s0006400414trial.dispatcher.hanatrial.ondemand.com/uiadaptationstable_sapwebide/client/v1.0.0_1559048343450/uiadaptation/util/AppVariantPreviewHelper.js" type="text/javascript"></script>
+
+</head>
+
+<!-- UI Content -->
+<body class="sapUiBody" id="content" role="application">
+</body>
+
+</html>
